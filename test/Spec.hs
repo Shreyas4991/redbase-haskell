@@ -1,2 +1,6 @@
+import qualified Utilities.Config as Config
+import Utilities.Errors
+
+
 main :: IO ()
-main = putStrLn "Test suite not yet implemented"
+main = putStrLn $ throwError $ (Error "Wrong String") <> (Error "Wrong address")
