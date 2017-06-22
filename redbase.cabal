@@ -18,8 +18,12 @@ library
   exposed-modules:      Lib
                         Utilities.Config
                         Utilities.Errors
+                        PageFiles.Page
+                        PageFiles.File
   build-depends:        base >= 4.7 && < 5
                         ,text
+                        ,binary
+                        ,bytestring
   default-language:     Haskell2010
 
 executable redbase-exe
@@ -36,6 +40,8 @@ test-suite redbase-test
   main-is:             Spec.hs
   build-depends:       base
                      , redbase
+                     , binary
+                     , bytestring
   ghc-options:         -threaded -rtsopts -with-rtsopts=-N
   default-language:    Haskell2010
 

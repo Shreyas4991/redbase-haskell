@@ -30,6 +30,7 @@ module PageFiles.File(
         byteLength :: (Binary a) => a -> Int
         byteLength object = fromIntegral $ BS.length (encode object)
 
+        --The page size must be obtained using byteLength. The idea being we only use constant sized pages. This goes without saying
         readPage :: (Binary a) => Handle -> Int -> IO (Page a)
         readPage fileHandle pageSize = readNBytes fileHandle pageSize >>= return.(decode :: (Binary a) => BS.ByteString -> Page a)
 
