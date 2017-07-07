@@ -7,14 +7,14 @@ data Configuration = Configuration {
     value::String
 }
 
-config :: [Configuration]
-config = [  Configuration {property = "MODE",value = "DEVELOPMENT"}]
 
-fetchConfigValue :: [Configuration] -> String -> String
-fetchConfigValue [] _ = "Invalid"
-fetchConfigValue (x:xs) prop
-    | property x == prop = value x
-    | otherwise = fetchConfigValue xs prop
+
 
 fetchConfig :: String -> String
-fetchConfig prop = fetchConfigValue config prop
+fetchConfig prop
+    | property matchingProp == prop = value matchingProp
+    | otherwise = "NOT Found"
+        where
+            matchingProp = if (null specConfig) then Configuration{property="not found",value = "not found"} else head config
+            specConfig = [x | x<-config, (property x) == prop]
+            config = [  Configuration {property = "MODE",value = "DEVELOPMENT"}]

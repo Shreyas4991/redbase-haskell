@@ -15,7 +15,7 @@ module Utilities.Errors(
 
     (<>) :: Error -> Error -> Error
     (<>) = mappend
-    
+
     displayError :: Error -> String
     displayError (Error x) = "ERROR: "++x
 
