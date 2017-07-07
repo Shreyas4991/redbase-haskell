@@ -20,6 +20,7 @@ library
                         Utilities.Errors
                         PageFiles.Page
                         PageFiles.File
+                        PageFiles.Buffer
   build-depends:        base >= 4.7 && < 5
                         ,text
                         ,binary

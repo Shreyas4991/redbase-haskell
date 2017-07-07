@@ -7,8 +7,9 @@ module PageFiles.Page(
 
     data Page a = Page {
                         pageNumber::Int,
+                        deleted :: Bool,
                         contents :: a
-                    } deriving(Generic,Show)
+                    } deriving(Generic,Show,Eq)
     --The type qualifier `Binary.Binary` for `a` makes it imperative for us to ensure that
     --any data type that we define and plan on storing in our pages must be
     --an instance of the typeclass binary. For this the GHC.Generics module

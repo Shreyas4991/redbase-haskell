@@ -45,9 +45,9 @@ testRecord = open "test.dat"
                                 >> readRecord handle (byteLength p)
                                     >>= System.IO.putStrLn.show
         where
-            p = Page {pageNumber=1,contents = Person {name="Finch",age = 22}}
-            q = Page {pageNumber=2,contents = Person {name="Reese",age = 18}}
-            r = Page {pageNumber=3,contents = Person {name="Fusco",age = 20}}
+            p = Page {pageNumber=1,deleted = False, contents = Person {name="Finch",age = 22}}
+            q = Page {pageNumber=2,deleted = False, contents = Person {name="Reese",age = 18}}
+            r = Page {pageNumber=3,deleted = False, contents = Person {name="Fusco",age = 20}}
 
 
 -- The main function executing all tests
