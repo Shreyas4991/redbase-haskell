@@ -8,15 +8,21 @@ module PageFiles.File(
         readPageAt,
         writePageAt
     )where
+        --imports
         import qualified Data.ByteString as BS
-
         import Data.Binary (encode,decode,Binary)
-        import System.IO as FileIO(Handle(..),openFile,hClose,withFile,IOMode(..),hSeek,SeekMode(..))
+        import System.IO as FileIO(
+                                    Handle(..),
+                                    openFile,
+                                    hClose,
+                                    IOMode(..),
+                                    hSeek,
+                                    SeekMode(..)
+                                )
         import PageFiles.Page
-        import GHC.Int (Int64)
-
         import Data.String.Conversions as DSC
 
+        -- Bindings
         open :: FilePath -> IO Handle
         open path = FileIO.openFile path ReadWriteMode
 
