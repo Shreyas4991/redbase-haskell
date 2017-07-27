@@ -1,29 +1,30 @@
 module Utilities.Errors(
     throwError,
-    displayError,
-    Error(..),
-    (<>)
+    Result(..),
+    (<*>)
 ) where
 
     import qualified Utilities.Config as Config
+    import Control.Monad
 
-    data Error = Error String deriving(Show)
+    data Result a = Error String | Result a
 
-    instance Monoid Error where
-        mempty = Error ""
-        mappend (Error x) (Error y) = Error (x ++ "\n AND "++y)
+    instance Functor Result where
+        fmap f (Result x) = Result (f x)
+        fmap f (Error errormessage) = (Error errormessage)
 
-    (<>) :: Error -> Error -> Error
-    (<>) = mappend
+    instance Applicative Result where
+        pure x = Result x
+        (Error x) <*> _ = (Error x)
+        _ <*> (Error y) = (Error y)
+        (Result f) <*> (Result x) = (Result $ f x)
 
-    displayError :: Error -> String
-    displayError (Error x) = "ERROR: "++x
+    instance Monad Result where
+        return res = Result res
+        Result res1 >>= function = (function res1)
+        (Error errormessage) >>= function = (Error errormessage)
 
-    throwErrorPrivate :: String -> Error -> String
-    throwErrorPrivate mode e
-        | mode == "DEVELOPMENT" = displayError e
-        | mode == "TESTING" = displayError e
-        | otherwise = ""
 
-    throwError :: Error -> String
-    throwError = throwErrorPrivate (Config.fetchConfig "MODE")
+    throwError :: Result a -> IO ()
+    throwError (Error message) = putStrLn message
+    throwError _ = return ()

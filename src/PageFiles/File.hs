@@ -1,7 +1,6 @@
 module PageFiles.File(
         open,
         close,
-        writeBytes,
         byteLength,
         readPage,
         writePage,

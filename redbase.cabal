@@ -26,6 +26,8 @@ library
                         ,binary
                         ,bytestring
                         ,string-conversions
+                        ,vector
+                        ,hashtables
   default-language:     Haskell2010
 
 executable redbase-exe
