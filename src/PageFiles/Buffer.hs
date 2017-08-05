@@ -66,15 +66,4 @@ module PageFiles.Buffer(
     getPageBufferPosition :: (Binary a) => Buffer a -> Int -> IO (Maybe Int)
     getPageBufferPosition currentBuffer pageNum = H.lookup (pageTable currentBuffer) pageNum
 
-    {--    -- Deletes an unpinned page if necessary
-    deleteUnPinnedContainer :: (Binary a) => Buffer a ->  IO (Maybe Int)
-    deleteUnPinnedContainer currentBuffer
-        | null $ unPinnedPageNumbers currentBuffer = (return (-1))
-        | otherwise = getPageBufferPosition (pageNumber $ last (unPinnedPageNumbers currentBuffer)) >>=
-    insertContainerProperly
-
-    insertPage :: (Binary a) => Page a -> Bool -> Bool -> Buffer a -> IO ()
-    insertPage newPage pinned currentBuffer
-                | getPageBufferPosition currentBuffer (pageNumber newPage) == Nothing =  newPageContainer newPage False pinned >>=
-                                                        \pageContainer ->
---}
+    

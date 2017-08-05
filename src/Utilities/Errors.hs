@@ -1,5 +1,6 @@
 module Utilities.Errors(
     throwError,
+    returnResult,
     Result(..),
     (<*>)
 ) where
@@ -24,6 +25,9 @@ module Utilities.Errors(
         Result res1 >>= function = (function res1)
         (Error errormessage) >>= function = (Error errormessage)
 
+
+    returnResult :: a -> Result a
+    returnResult = return
 
     throwError :: Result a -> IO ()
     throwError (Error message) = putStrLn message
