@@ -66,4 +66,4 @@ module PageFiles.Buffer(
     getPageBufferPosition :: (Binary a) => Buffer a -> Int -> IO (Maybe Int)
     getPageBufferPosition currentBuffer pageNum = H.lookup (pageTable currentBuffer) pageNum
 
-    
+    --Ok I should have used a monad transformer
