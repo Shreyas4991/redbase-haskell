@@ -1,0 +1,270 @@
+
+==================== FINAL INTERFACE ====================
+2017-07-27 00:05:47.521253 UTC
+
+interface redbase-0.1.0.0-FlVzKmFUjPK8GKhemx3jod:Utilities.Errors 8002
+  interface hash: 7eefd02890922a202d5c4bcf9d75a9ba
+  ABI hash: c1a4f0d67016de354386d4642186fb39
+  export-list hash: 3021bf59c7674e86eefee5e3f0827b7a
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: fb69a14b00d39819d207939c1c7fa645
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Utilities.Errors.throwError
+  GHC.Base.Applicative|{GHC.Base.<*>}
+  Utilities.Errors.Result{Utilities.Errors.Error Utilities.Errors.Result}
+module dependencies: Utilities.Config
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Control.Monad a6784c5dab0d75c63dabec5a37843f98
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:System.IO e4a64a8e3dce8616da54f0ee7104f7db
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+import  -/  Utilities.Config 8b4b2bbf6f1ceb23ac61b16ec046babd
+  exports: 6c9c52d3d1656cc0ef7c6ee965427248
+422bee5951204fccc8026897f0127fb9
+  $fApplicativeResult :: GHC.Base.Applicative Utilities.Errors.Result
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Utilities.Errors.Result
+                  Utilities.Errors.$fFunctorResult
+                  Utilities.Errors.Result
+                  Utilities.Errors.$fApplicativeResult_$c<*>
+                  Utilities.Errors.$fApplicativeResult_$c*>
+                  Utilities.Errors.$fApplicativeResult_$c<* -}
+422bee5951204fccc8026897f0127fb9
+  $fApplicativeResult_$c*> ::
+    Utilities.Errors.Result a
+    -> Utilities.Errors.Result b -> Utilities.Errors.Result b
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ b
+                   (eta :: Utilities.Errors.Result a)
+                   (eta1 :: Utilities.Errors.Result b) ->
+                 case eta of wild {
+                   Utilities.Errors.Error errormessage
+                   -> Utilities.Errors.Error @ b errormessage
+                   Utilities.Errors.Result x -> eta1 }) -}
+422bee5951204fccc8026897f0127fb9
+  $fApplicativeResult_$c<* ::
+    Utilities.Errors.Result a
+    -> Utilities.Errors.Result b -> Utilities.Errors.Result a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ b
+                   (eta :: Utilities.Errors.Result a)
+                   (eta1 :: Utilities.Errors.Result b) ->
+                 case eta of wild {
+                   Utilities.Errors.Error errormessage
+                   -> Utilities.Errors.Error @ a errormessage
+                   Utilities.Errors.Result x
+                   -> case eta1 of wild1 {
+                        Utilities.Errors.Error y -> Utilities.Errors.Error @ a y
+                        Utilities.Errors.Result ipv
+                        -> Utilities.Errors.Result @ a x } }) -}
+422bee5951204fccc8026897f0127fb9
+  $fApplicativeResult_$c<*> ::
+    Utilities.Errors.Result (a -> b)
+    -> Utilities.Errors.Result a -> Utilities.Errors.Result b
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ b
+                   (ds :: Utilities.Errors.Result (a -> b))
+                   (ds1 :: Utilities.Errors.Result a) ->
+                 case ds of wild {
+                   Utilities.Errors.Error x -> Utilities.Errors.Error @ b x
+                   Utilities.Errors.Result ipv
+                   -> case ds1 of wild1 {
+                        Utilities.Errors.Error y -> Utilities.Errors.Error @ b y
+                        Utilities.Errors.Result ipv1
+                        -> Utilities.Errors.Result @ b (ipv ipv1) } }) -}
+422bee5951204fccc8026897f0127fb9
+  $fFunctorResult :: GHC.Base.Functor Utilities.Errors.Result
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Utilities.Errors.Result
+                  Utilities.Errors.$fFunctorResult_$cfmap
+                  Utilities.Errors.$fFunctorResult_$c<$ -}
+422bee5951204fccc8026897f0127fb9
+  $fFunctorResult_$c<$ ::
+    a -> Utilities.Errors.Result b -> Utilities.Errors.Result a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ b (eta :: a) (ds :: Utilities.Errors.Result b) ->
+                 case ds of wild {
+                   Utilities.Errors.Error errormessage
+                   -> Utilities.Errors.Error @ a errormessage
+                   Utilities.Errors.Result x -> Utilities.Errors.Result @ a eta }) -}
+422bee5951204fccc8026897f0127fb9
+  $fFunctorResult_$cfmap ::
+    (a -> b) -> Utilities.Errors.Result a -> Utilities.Errors.Result b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*C1(U)><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ b (f :: a -> b) (ds :: Utilities.Errors.Result a) ->
+                 case ds of wild {
+                   Utilities.Errors.Error errormessage
+                   -> Utilities.Errors.Error @ b errormessage
+                   Utilities.Errors.Result x
+                   -> Utilities.Errors.Result @ b (f x) }) -}
+422bee5951204fccc8026897f0127fb9
+  $fMonadResult :: GHC.Base.Monad Utilities.Errors.Result
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Utilities.Errors.Result
+                  Utilities.Errors.$fApplicativeResult
+                  Utilities.Errors.$fMonadResult_$c>>=
+                  Utilities.Errors.$fMonadResult_$c>>
+                  Utilities.Errors.Result
+                  Utilities.Errors.$fMonadResult_$s$dmfail -}
+422bee5951204fccc8026897f0127fb9
+  $fMonadResult_$c>> ::
+    Utilities.Errors.Result a
+    -> Utilities.Errors.Result b -> Utilities.Errors.Result b
+  {- Arity: 2, Strictness: <L,U><L,U>, Inline: INLINE (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ @ a
+                   @ b
+                   (m1 :: Utilities.Errors.Result a)
+                   (k :: Utilities.Errors.Result b) ->
+                 Utilities.Errors.$fMonadResult_$c>>=
+                   @ a
+                   @ b
+                   m1
+                   (\ (ds :: a)[OneShot] -> k)) -}
+422bee5951204fccc8026897f0127fb9
+  $fMonadResult_$c>>= ::
+    Utilities.Errors.Result a
+    -> (a -> Utilities.Errors.Result b) -> Utilities.Errors.Result b
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*C1(U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   @ b
+                   (ds :: Utilities.Errors.Result a)
+                   (function :: a -> Utilities.Errors.Result b) ->
+                 case ds of wild {
+                   Utilities.Errors.Error errormessage
+                   -> Utilities.Errors.Error @ b errormessage
+                   Utilities.Errors.Result res1 -> function res1 }) -}
+422bee5951204fccc8026897f0127fb9
+  $fMonadResult_$s$dmfail ::
+    GHC.Base.String -> Utilities.Errors.Result a
+  {- Arity: 1, Strictness: <B,U>x,
+     Unfolding: InlineRule (-1, True, True)
+                (\ @ a (s :: GHC.Base.String) ->
+                 GHC.Err.errorWithoutStackTrace
+                   @ 'GHC.Types.PtrRepLifted
+                   @ (Utilities.Errors.Result a)
+                   s) -}
+fd6770a37a71204784062bc76e6710f1
+  $tc'Error :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1687111894751612947##
+                   9908301698740445823##
+                   Utilities.Errors.$trModule
+                   Utilities.Errors.$tc'Error1) -}
+8df2e544d728bed55367ae0840157869
+  $tc'Error1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Error"#) -}
+86730dabf31de61eb9788e1689f9a4d8
+  $tc'Result :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14145381036006901663##
+                   13047802733318425706##
+                   Utilities.Errors.$trModule
+                   Utilities.Errors.$tc'Result1) -}
+a607b9b7b4a70b7fa52914ab5cc31413
+  $tc'Result1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Result"#) -}
+e8e0dda158b813e168a812c3d0894836
+  $tcResult :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4304931114671902770##
+                   12067918581086420711##
+                   Utilities.Errors.$trModule
+                   Utilities.Errors.$tcResult1) -}
+9abbe865253c5d73632b4998c60ddb89
+  $tcResult1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Result"#) -}
+4a0e075a3d7df5925cfff5fd6b607b5d
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Utilities.Errors.$trModule2
+                   Utilities.Errors.$trModule1) -}
+df35571b7bf4649b3e35d46337618d17
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Utilities.Errors"#) -}
+0efeef2020583de4ad98a5b44568e1ad
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "redbase-0.1.0.0-FlVzKmFUjPK8GKhemx3jod"#) -}
+422bee5951204fccc8026897f0127fb9
+  data Result a = Error GHC.Base.String | Result a
+382015ae7a3c21f8c160bfe73f827c16
+  throwError :: Utilities.Errors.Result a -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <S,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Utilities.Errors.throwError1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Utilities.Errors.Result a>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+31f3e8cca064d6c7d1082f2e46237001
+  throwError1 ::
+    Utilities.Errors.Result a
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <S,1*U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   (ds :: Utilities.Errors.Result a)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case ds of wild {
+                   Utilities.Errors.Error message
+                   -> GHC.IO.Handle.Text.hPutStr2
+                        GHC.IO.Handle.FD.stdout
+                        message
+                        GHC.Types.True
+                        eta
+                   Utilities.Errors.Result ipv -> (# eta, GHC.Tuple.() #) }) -}
+instance [safe] GHC.Base.Applicative [Utilities.Errors.Result]
+  = Utilities.Errors.$fApplicativeResult
+instance [safe] GHC.Base.Functor [Utilities.Errors.Result]
+  = Utilities.Errors.$fFunctorResult
+instance [safe] GHC.Base.Monad [Utilities.Errors.Result]
+  = Utilities.Errors.$fMonadResult
+"SPEC/Utilities.Errors $dmfail @ Result" [ALWAYS] forall ($dMonad :: GHC.Base.Monad
+                                                                       Utilities.Errors.Result)
+  GHC.Base.$dmfail @ Utilities.Errors.Result $dMonad
+  = Utilities.Errors.$fMonadResult_$s$dmfail
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

@@ -1,0 +1,120 @@
+
+==================== FINAL INTERFACE ====================
+2017-07-27 00:05:47.440717 UTC
+
+interface redbase-0.1.0.0-FlVzKmFUjPK8GKhemx3jod:Utilities.Config 8002
+  interface hash: c4c1bad1a29afc8d3c33641f04c00863
+  ABI hash: 8b4b2bbf6f1ceb23ac61b16ec046babd
+  export-list hash: 6c9c52d3d1656cc0ef7c6ee965427248
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: fb69a14b00d39819d207939c1c7fa645
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Utilities.Config.fetchConfig
+module dependencies:
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+99d7669b1b423ca56163722837116a7b
+  $tc'Configuration :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   215360329820424072##
+                   14268090955469743641##
+                   Utilities.Config.$trModule
+                   Utilities.Config.$tc'Configuration1) -}
+16bb30e1511604fb8b1d710f2960e8a7
+  $tc'Configuration1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Configuration"#) -}
+3ba8db2be974cda763af106b78b3d264
+  $tcConfiguration :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   10014255617770095428##
+                   7756063977910248432##
+                   Utilities.Config.$trModule
+                   Utilities.Config.$tcConfiguration1) -}
+04af28e4ef1b318a6af11fb2083a93ab
+  $tcConfiguration1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Configuration"#) -}
+f0fbb58df7938e7f7d6d8511d16c65a3
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Utilities.Config.$trModule2
+                   Utilities.Config.$trModule1) -}
+d69236cf11daa867b926faea12659899
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Utilities.Config"#) -}
+f5a5c65de4a35aa91f13faa582d1b692
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "redbase-0.1.0.0-FlVzKmFUjPK8GKhemx3jod"#) -}
+68dceea0c0212ed02080772ba14ec05f
+  data Configuration
+    = Configuration {property :: GHC.Base.String,
+                     value :: GHC.Base.String}
+cb81dddd68fb921b8e25f6f23b8e2073
+  fetchConfig :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (prop :: GHC.Base.String) ->
+                 case GHC.Base.eqString Utilities.Config.fetchConfig4 prop of wild {
+                   GHC.Types.False
+                   -> case GHC.Base.eqString
+                             Utilities.Config.fetchConfig3
+                             prop of wild1 {
+                        GHC.Types.False -> Utilities.Config.fetchConfig2
+                        GHC.Types.True -> Utilities.Config.fetchConfig3 }
+                   GHC.Types.True -> Utilities.Config.fetchConfig1 }) -}
+acd0ddd79539e8fae447f6491f0b23b8
+  fetchConfig1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "DEVELOPMENT"#) -}
+8b408ceb763871b2ce458d489d4aa4e8
+  fetchConfig2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "NOT Found"#) -}
+2b5a61f42331ccba1d39bf2a47206730
+  fetchConfig3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "not found"#) -}
+71d2394932c95694ba7c3803fc019601
+  fetchConfig4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "MODE"#) -}
+19a8e6e1cd28181701fc2b88534f87dc
+  property :: Utilities.Config.Configuration -> GHC.Base.String
+  RecSel Left Utilities.Config.Configuration
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Utilities.Config.Configuration) ->
+                 case ds of wild { Utilities.Config.Configuration ds1 ds2 ->
+                 ds1 }) -}
+3f740eee234800b99228404c0ce068f3
+  value :: Utilities.Config.Configuration -> GHC.Base.String
+  RecSel Left Utilities.Config.Configuration
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Utilities.Config.Configuration) ->
+                 case ds of wild { Utilities.Config.Configuration ds1 ds2 ->
+                 ds2 }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

@@ -1,0 +1,661 @@
+
+==================== FINAL INTERFACE ====================
+2017-06-21 19:21:15.606652 UTC
+
+interface redbase-0.1.0.0-9iZ8aZgef15K1eMl0hX7Pn:PageFiles.PageFile [family instance module] 8002
+  interface hash: 4d589691d4b6c66af487881c2f40bb40
+  ABI hash: e877a0c4ae74a13076f8bd36e9d7df65
+  export-list hash: 3f6298a2b48ca38fa2f839708f39b0ed
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 075165847d4e679e0c158182fc8914a6
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  PageFiles.PageFile.Page{PageFiles.PageFile.Page contents pageNumber}
+module dependencies:
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0*
+                      binary-0.8.3.0@binary-0.8.3.0*
+                      bytestring-0.10.8.1@bytestring-0.10.8.1*
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.Generics 1dbec2bc7dd1c5bd8c89ed857eaed19b
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  binary-0.8.3.0@binary-0.8.3.0:Data.Binary 04731cb24bdd2d171e280dacabbc5b93
+import  -/  binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Class b88eee4db2420047af9b40010da11191
+import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Lazy 208431757121593b5ca64b062df0cfbd
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+9013649fdad4a5e06c681d9098e404bf
+  $fBinaryPage ::
+    Data.Binary.Class.Binary a =>
+    Data.Binary.Class.Binary (PageFiles.PageFile.Page a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(U(A,U)),C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dBinary :: Data.Binary.Class.Binary a).
+                  @ (PageFiles.PageFile.Page a)
+                  (PageFiles.PageFile.$fBinaryPage_$cput @ a $dBinary)
+                  (PageFiles.PageFile.$fBinaryPage_$cget @ a $dBinary)
+                  (PageFiles.PageFile.$fBinaryPage_$cputList @ a $dBinary) -}
+9013649fdad4a5e06c681d9098e404bf
+  $fBinaryPage1 ::
+    Data.Binary.Class.Binary a =>
+    forall r.
+    Data.ByteString.Internal.ByteString
+    -> Data.Binary.Get.Internal.Success (PageFiles.PageFile.Page a) r
+    -> Data.Binary.Get.Internal.Decoder r
+  {- Arity: 3,
+     Strictness: <L,U(A,C(C1(U)),A)><S(SLSS),1*U(U,U,U,U)><L,C(C1(U))>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: Data.Binary.Class.Binary a)
+                   @ r
+                   (w1 :: Data.ByteString.Internal.ByteString)
+                   (w2 :: Data.Binary.Get.Internal.Success
+                            (PageFiles.PageFile.Page a) r) ->
+                 case w1 of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
+                 PageFiles.PageFile.$w$cget @ a w @ r ww1 ww2 ww3 ww4 w2 }) -}
+9013649fdad4a5e06c681d9098e404bf
+  $fBinaryPage_$cget ::
+    Data.Binary.Class.Binary a =>
+    Data.Binary.Get.Internal.Get (PageFiles.PageFile.Page a)
+  {- Arity: 3,
+     Strictness: <L,U(A,C(C1(U)),A)><S(SLSS),1*U(U,U,U,U)><L,C(C1(U))>,
+     Unfolding: InlineRule (0, True, True)
+                PageFiles.PageFile.$fBinaryPage1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Data.Binary.Class.Binary a>_R
+                 ->_R Sym (Data.Binary.Get.Internal.N:Get[0]
+                               <PageFiles.PageFile.Page a>_R)) -}
+9013649fdad4a5e06c681d9098e404bf
+  $fBinaryPage_$cput ::
+    Data.Binary.Class.Binary a =>
+    PageFiles.PageFile.Page a -> Data.Binary.Put.Put
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <L,1*U(1*C1(U(A,U)),A,A)><S,1*U(U(U),U)>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   (w :: Data.Binary.Class.Binary a)
+                   (w1 :: PageFiles.PageFile.Page a) ->
+                 case w1 of ww { PageFiles.PageFile.Page ww1 ww2 ->
+                 (Data.Binary.Put.PairS
+                    @ ()
+                    GHC.Tuple.()
+                    (let {
+                       ds :: Data.ByteString.Builder.Internal.Builder
+                       = case Data.Binary.Class.$w$cput1 ww1 of ww3 { (#,#) ww4 ww5 ->
+                         ww5 }
+                     } in
+                     let {
+                       ds1 :: Data.ByteString.Builder.Internal.Builder
+                       = case (Data.Binary.Class.put @ a w ww2)
+                                `cast`
+                              (Data.Binary.Put.N:PutM[0] <()>_N) of wild { Data.Binary.Put.PairS ds2 w' ->
+                         w' }
+                     } in
+                     (\ @ r (eta :: Data.ByteString.Builder.Internal.BuildStep r) ->
+                      ds `cast` (Data.ByteString.Builder.Internal.N:Builder[0])
+                        @ r
+                        (ds1 `cast` (Data.ByteString.Builder.Internal.N:Builder[0])
+                           @ r
+                           eta))
+                       `cast`
+                     (Sym (Data.ByteString.Builder.Internal.N:Builder[0]))))
+                   `cast`
+                 (Sym (Data.Binary.Put.N:PutM[0]) <()>_N) }) -}
+9013649fdad4a5e06c681d9098e404bf
+  $fBinaryPage_$cputList ::
+    Data.Binary.Class.Binary a =>
+    [PageFiles.PageFile.Page a] -> Data.Binary.Put.Put
+  {- Arity: 1, Strictness: <L,U(C(U(A,U)),C(C1(U)),A)> -}
+9013649fdad4a5e06c681d9098e404bf
+  $fGenericPage :: GHC.Generics.Generic (PageFiles.PageFile.Page a)
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a.
+                  @ (PageFiles.PageFile.Page a)
+                  (PageFiles.PageFile.$fGenericPage_$cfrom @ a)
+                  (PageFiles.PageFile.$fGenericPage_$cto @ a) -}
+9013649fdad4a5e06c681d9098e404bf
+  $fGenericPage1 ::
+    PageFiles.PageFile.Page a
+    -> GHC.Generics.M1
+         GHC.Generics.C
+         ('GHC.Generics.MetaCons
+            "Page" 'GHC.Generics.PrefixI 'GHC.Types.True)
+         (GHC.Generics.M1
+            GHC.Generics.S
+            ('GHC.Generics.MetaSel
+               ('GHC.Base.Just "pageNumber")
+               'GHC.Generics.NoSourceUnpackedness
+               'GHC.Generics.NoSourceStrictness
+               'GHC.Generics.DecidedLazy)
+            (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int)
+          GHC.Generics.:*: GHC.Generics.M1
+                             GHC.Generics.S
+                             ('GHC.Generics.MetaSel
+                                ('GHC.Base.Just "contents")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy)
+                             (GHC.Generics.K1 GHC.Generics.R a))
+         x
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a @ x (x1 :: PageFiles.PageFile.Page a) ->
+                 case x1 of wild { PageFiles.PageFile.Page g1 g2 ->
+                 (GHC.Generics.:*:
+                    @ (GHC.Generics.M1
+                         GHC.Generics.S
+                         ('GHC.Generics.MetaSel
+                            ('GHC.Base.Just "pageNumber")
+                            'GHC.Generics.NoSourceUnpackedness
+                            'GHC.Generics.NoSourceStrictness
+                            'GHC.Generics.DecidedLazy)
+                         (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int))
+                    @ (GHC.Generics.M1
+                         GHC.Generics.S
+                         ('GHC.Generics.MetaSel
+                            ('GHC.Base.Just "contents")
+                            'GHC.Generics.NoSourceUnpackedness
+                            'GHC.Generics.NoSourceStrictness
+                            'GHC.Generics.DecidedLazy)
+                         (GHC.Generics.K1 GHC.Generics.R a))
+                    @ x
+                    g1
+                      `cast`
+                    (Trans
+                         (Sym (GHC.Generics.N:K1[0]
+                                   <GHC.Generics.R>_P <GHC.Types.Int>_R <x>_P))
+                         (Sym (GHC.Generics.N:M1[0]
+                                   <GHC.Generics.S>_P
+                                   <'GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "pageNumber")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy>_P
+                                   <GHC.Generics.K1 GHC.Generics.R GHC.Types.Int>_R) <x>_N))
+                    g2
+                      `cast`
+                    (Trans
+                         (Sym (GHC.Generics.N:K1[0] <GHC.Generics.R>_P <a>_R <x>_P))
+                         (Sym (GHC.Generics.N:M1[0]
+                                   <GHC.Generics.S>_P
+                                   <'GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "contents")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy>_P
+                                   <GHC.Generics.K1 GHC.Generics.R a>_R) <x>_N)))
+                   `cast`
+                 (Sym (GHC.Generics.N:M1[0]
+                           <GHC.Generics.C>_P
+                           <'GHC.Generics.MetaCons
+                              "Page" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                           <GHC.Generics.M1
+                              GHC.Generics.S
+                              ('GHC.Generics.MetaSel
+                                 ('GHC.Base.Just "pageNumber")
+                                 'GHC.Generics.NoSourceUnpackedness
+                                 'GHC.Generics.NoSourceStrictness
+                                 'GHC.Generics.DecidedLazy)
+                              (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int)
+                            GHC.Generics.:*: GHC.Generics.M1
+                                               GHC.Generics.S
+                                               ('GHC.Generics.MetaSel
+                                                  ('GHC.Base.Just "contents")
+                                                  'GHC.Generics.NoSourceUnpackedness
+                                                  'GHC.Generics.NoSourceStrictness
+                                                  'GHC.Generics.DecidedLazy)
+                                               (GHC.Generics.K1 GHC.Generics.R a)>_R) <x>_N) }) -}
+9013649fdad4a5e06c681d9098e404bf
+  $fGenericPage_$cfrom ::
+    PageFiles.PageFile.Page a
+    -> GHC.Generics.Rep (PageFiles.PageFile.Page a) x
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
+     Unfolding: InlineRule (0, True, True)
+                PageFiles.PageFile.$fGenericPage1
+                  `cast`
+                (forall (a :: <*>_N) (x :: <GHC.Types.*>_N).
+                 <PageFiles.PageFile.Page a>_R
+                 ->_R Trans
+                          (Sym (GHC.Generics.N:M1[0]
+                                    <GHC.Generics.D>_P
+                                    <'GHC.Generics.MetaData
+                                       "Page"
+                                       "PageFiles.PageFile"
+                                       "redbase-0.1.0.0-9iZ8aZgef15K1eMl0hX7Pn"
+                                       'GHC.Types.False>_P
+                                    <GHC.Generics.M1
+                                       GHC.Generics.C
+                                       ('GHC.Generics.MetaCons
+                                          "Page" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                       (GHC.Generics.M1
+                                          GHC.Generics.S
+                                          ('GHC.Generics.MetaSel
+                                             ('GHC.Base.Just "pageNumber")
+                                             'GHC.Generics.NoSourceUnpackedness
+                                             'GHC.Generics.NoSourceStrictness
+                                             'GHC.Generics.DecidedLazy)
+                                          (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int)
+                                        GHC.Generics.:*: GHC.Generics.M1
+                                                           GHC.Generics.S
+                                                           ('GHC.Generics.MetaSel
+                                                              ('GHC.Base.Just "contents")
+                                                              'GHC.Generics.NoSourceUnpackedness
+                                                              'GHC.Generics.NoSourceStrictness
+                                                              'GHC.Generics.DecidedLazy)
+                                                           (GHC.Generics.K1 GHC.Generics.R a))>_R))
+                          (Sub (Sym (PageFiles.PageFile.Rep_Page[0] <a>_N))) <x>_N) -}
+9013649fdad4a5e06c681d9098e404bf
+  $fGenericPage_$cto ::
+    GHC.Generics.Rep (PageFiles.PageFile.Page a) x
+    -> PageFiles.PageFile.Page a
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U(U,U)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a
+                   @ x
+                   (ds :: GHC.Generics.Rep (PageFiles.PageFile.Page a) x) ->
+                 case ds
+                        `cast`
+                      (Trans
+                           (Sub (PageFiles.PageFile.Rep_Page[0] <a>_N))
+                           (Trans
+                                (GHC.Generics.N:M1[0]
+                                     <GHC.Generics.D>_P
+                                     <'GHC.Generics.MetaData
+                                        "Page"
+                                        "PageFiles.PageFile"
+                                        "redbase-0.1.0.0-9iZ8aZgef15K1eMl0hX7Pn"
+                                        'GHC.Types.False>_P
+                                     <GHC.Generics.M1
+                                        GHC.Generics.C
+                                        ('GHC.Generics.MetaCons
+                                           "Page" 'GHC.Generics.PrefixI 'GHC.Types.True)
+                                        (GHC.Generics.M1
+                                           GHC.Generics.S
+                                           ('GHC.Generics.MetaSel
+                                              ('GHC.Base.Just "pageNumber")
+                                              'GHC.Generics.NoSourceUnpackedness
+                                              'GHC.Generics.NoSourceStrictness
+                                              'GHC.Generics.DecidedLazy)
+                                           (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int)
+                                         GHC.Generics.:*: GHC.Generics.M1
+                                                            GHC.Generics.S
+                                                            ('GHC.Generics.MetaSel
+                                                               ('GHC.Base.Just "contents")
+                                                               'GHC.Generics.NoSourceUnpackedness
+                                                               'GHC.Generics.NoSourceStrictness
+                                                               'GHC.Generics.DecidedLazy)
+                                                            (GHC.Generics.K1 GHC.Generics.R a))>_R)
+                                (GHC.Generics.N:M1[0]
+                                     <GHC.Generics.C>_P
+                                     <'GHC.Generics.MetaCons
+                                        "Page" 'GHC.Generics.PrefixI 'GHC.Types.True>_P
+                                     <GHC.Generics.M1
+                                        GHC.Generics.S
+                                        ('GHC.Generics.MetaSel
+                                           ('GHC.Base.Just "pageNumber")
+                                           'GHC.Generics.NoSourceUnpackedness
+                                           'GHC.Generics.NoSourceStrictness
+                                           'GHC.Generics.DecidedLazy)
+                                        (GHC.Generics.K1 GHC.Generics.R GHC.Types.Int)
+                                      GHC.Generics.:*: GHC.Generics.M1
+                                                         GHC.Generics.S
+                                                         ('GHC.Generics.MetaSel
+                                                            ('GHC.Base.Just "contents")
+                                                            'GHC.Generics.NoSourceUnpackedness
+                                                            'GHC.Generics.NoSourceStrictness
+                                                            'GHC.Generics.DecidedLazy)
+                                                         (GHC.Generics.K1
+                                                            GHC.Generics.R
+                                                            a)>_R)) <x>_N) of wild { GHC.Generics.:*: ds1 ds2 ->
+                 PageFiles.PageFile.Page
+                   @ a
+                   ds1
+                     `cast`
+                   (Trans
+                        (GHC.Generics.N:M1[0]
+                             <GHC.Generics.S>_P
+                             <'GHC.Generics.MetaSel
+                                ('GHC.Base.Just "pageNumber")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy>_P
+                             <GHC.Generics.K1 GHC.Generics.R GHC.Types.Int>_R <x>_N)
+                        (GHC.Generics.N:K1[0] <GHC.Generics.R>_P <GHC.Types.Int>_R <x>_P))
+                   ds2
+                     `cast`
+                   (Trans
+                        (GHC.Generics.N:M1[0]
+                             <GHC.Generics.S>_P
+                             <'GHC.Generics.MetaSel
+                                ('GHC.Base.Just "contents")
+                                'GHC.Generics.NoSourceUnpackedness
+                                'GHC.Generics.NoSourceStrictness
+                                'GHC.Generics.DecidedLazy>_P
+                             <GHC.Generics.K1 GHC.Generics.R a>_R <x>_N)
+                        (GHC.Generics.N:K1[0] <GHC.Generics.R>_P <a>_R <x>_P)) }) -}
+9013649fdad4a5e06c681d9098e404bf
+  $fShowPage ::
+    GHC.Show.Show a => GHC.Show.Show (PageFiles.PageFile.Page a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A,A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a ($dShow :: GHC.Show.Show a).
+                  @ (PageFiles.PageFile.Page a)
+                  (PageFiles.PageFile.$fShowPage_$cshowsPrec @ a $dShow)
+                  (PageFiles.PageFile.$fShowPage_$cshow @ a $dShow)
+                  (PageFiles.PageFile.$fShowPage_$cshowList @ a $dShow) -}
+89a965f2d6bbda7cc9e0a94dce501cb9
+  $fShowPage1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+43035fcfcab06872d87cbc3772c25d97
+  $fShowPage2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "}"#) -}
+cf5ba5d831007d32c5966094fae24037
+  $fShowPage3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "contents = "#) -}
+d26a527a332d8b2cec45e9668cf3b8cf
+  $fShowPage4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# ", "#) -}
+cae9a6052fcad3fd5004cdeb1a25921d
+  $fShowPage5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "pageNumber = "#) -}
+dd78561393df8a8ef23405936fbd98cb
+  $fShowPage6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "Page {"#) -}
+9013649fdad4a5e06c681d9098e404bf
+  $fShowPage_$cshow ::
+    GHC.Show.Show a => PageFiles.PageFile.Page a -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,1*U(1*C1(C1(U)),A,A)><S,1*U(U(U),U)>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (x :: PageFiles.PageFile.Page a) ->
+                 PageFiles.PageFile.$fShowPage_$cshowsPrec
+                   @ a
+                   $dShow
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+9013649fdad4a5e06c681d9098e404bf
+  $fShowPage_$cshowList ::
+    GHC.Show.Show a => [PageFiles.PageFile.Page a] -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><S,1*U><L,U>,
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   ($dShow :: GHC.Show.Show a)
+                   (eta :: [PageFiles.PageFile.Page a])
+                   (eta1 :: GHC.Base.String) ->
+                 GHC.Show.showList__
+                   @ (PageFiles.PageFile.Page a)
+                   (PageFiles.PageFile.$fShowPage_$cshowsPrec
+                      @ a
+                      $dShow
+                      PageFiles.PageFile.$fShowPage1)
+                   eta
+                   eta1) -}
+9013649fdad4a5e06c681d9098e404bf
+  $fShowPage_$cshowsPrec ::
+    GHC.Show.Show a =>
+    GHC.Types.Int -> PageFiles.PageFile.Page a -> GHC.Show.ShowS
+  {- Arity: 3,
+     Strictness: <L,1*U(1*C1(C1(U)),A,A)><S(S),1*U(U)><S,1*U(U(U),U)>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: PageFiles.PageFile.Page a) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 case w2 of ww2 { PageFiles.PageFile.Page ww3 ww4 ->
+                 PageFiles.PageFile.$w$cshowsPrec @ a w ww1 ww3 ww4 } }) -}
+958b57fec31c52d3f2fd99f695c2c5ff
+  $tc'Page :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6752945968918552239##
+                   3616933435067408679##
+                   PageFiles.PageFile.$trModule
+                   PageFiles.PageFile.$tc'Page1) -}
+b90b374ca883edf7633a7072ece6a9b5
+  $tc'Page1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Page"#) -}
+c491df823fe4a0ce88bbcffe677661ce
+  $tcPage :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13877419779151059136##
+                   6633165808073184669##
+                   PageFiles.PageFile.$trModule
+                   PageFiles.PageFile.$tcPage1) -}
+4c1ca68451b4ec66301dfac9b3333f1c
+  $tcPage1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Page"#) -}
+ed221002a1d10c40dd0adfb3e8a4081e
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   PageFiles.PageFile.$trModule2
+                   PageFiles.PageFile.$trModule1) -}
+a58bad92a6bf48c35a9cb1a83d2f8431
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "PageFiles.PageFile"#) -}
+8afe7a0d07631d475e9fd86b44ce08f9
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "redbase-0.1.0.0-9iZ8aZgef15K1eMl0hX7Pn"#) -}
+9013649fdad4a5e06c681d9098e404bf
+  $w$cget ::
+    Data.Binary.Class.Binary a =>
+    forall r.
+    GHC.Prim.Addr#
+    -> GHC.ForeignPtr.ForeignPtrContents
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> Data.Binary.Get.Internal.Success (PageFiles.PageFile.Page a) r
+    -> Data.Binary.Get.Internal.Decoder r
+  {- Arity: 6,
+     Strictness: <L,U(A,C(C1(U)),A)><S,U><L,U><S,U><S,U><L,C(C1(U))>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: Data.Binary.Class.Binary a)
+                   @ r
+                   (ww :: GHC.Prim.Addr#)
+                   (ww1 :: GHC.ForeignPtr.ForeignPtrContents)
+                   (ww2 :: GHC.Prim.Int#)
+                   (ww3 :: GHC.Prim.Int#)
+                   (w1 :: Data.Binary.Get.Internal.Success
+                            (PageFiles.PageFile.Page a) r) ->
+                 Data.Binary.Class.$w$cget9
+                   @ r
+                   ww
+                   ww1
+                   ww2
+                   ww3
+                   (\ (i' :: Data.ByteString.Internal.ByteString)
+                      (a1 :: GHC.Generics.M1
+                               GHC.Generics.S
+                               ('GHC.Generics.MetaSel
+                                  ('GHC.Base.Just "pageNumber")
+                                  'GHC.Generics.NoSourceUnpackedness
+                                  'GHC.Generics.NoSourceStrictness
+                                  'GHC.Generics.DecidedLazy)
+                               (GHC.Generics.Rec0 GHC.Types.Int)
+                               GHC.Prim.Any)[OneShot] ->
+                    (Data.Binary.Class.get @ a w)
+                      `cast`
+                    (Data.Binary.Get.Internal.N:Get[0] <a>_R)
+                      @ r
+                      i'
+                      (\ (i'1 :: Data.ByteString.Internal.ByteString) (a2 :: a) ->
+                       w1
+                         i'1
+                         (PageFiles.PageFile.Page
+                            @ a
+                            a1
+                              `cast`
+                            (Trans
+                                 (GHC.Generics.N:M1[0]
+                                      <GHC.Generics.S>_P
+                                      <'GHC.Generics.MetaSel
+                                         ('GHC.Base.Just "pageNumber")
+                                         'GHC.Generics.NoSourceUnpackedness
+                                         'GHC.Generics.NoSourceStrictness
+                                         'GHC.Generics.DecidedLazy>_P
+                                      <GHC.Generics.K1
+                                         GHC.Generics.R GHC.Types.Int>_R <GHC.Prim.Any>_N)
+                                 (GHC.Generics.N:K1[0]
+                                      <GHC.Generics.R>_P <GHC.Types.Int>_R <GHC.Prim.Any>_P))
+                            a2)))
+                     `cast`
+                   (<Data.ByteString.Internal.ByteString>_R
+                    ->_R Trans
+                             (GHC.Generics.N:M1[0]
+                                  <GHC.Generics.S>_P
+                                  <'GHC.Generics.MetaSel
+                                     ('GHC.Base.Just "pageNumber")
+                                     'GHC.Generics.NoSourceUnpackedness
+                                     'GHC.Generics.NoSourceStrictness
+                                     'GHC.Generics.DecidedLazy>_P
+                                  <GHC.Generics.K1 GHC.Generics.R GHC.Types.Int>_R <GHC.Prim.Any>_N)
+                             (GHC.Generics.N:K1[0]
+                                  <GHC.Generics.R>_P <GHC.Types.Int>_R <GHC.Prim.Any>_P)
+                    ->_R <Data.Binary.Get.Internal.Decoder r>_R)) -}
+53b80b334fed236959eb7dc96ae8129c
+  $w$cshowsPrec ::
+    GHC.Show.Show a =>
+    GHC.Prim.Int# -> GHC.Types.Int -> a -> GHC.Show.ShowS
+  {- Arity: 4,
+     Strictness: <L,1*U(1*C1(C1(U)),A,A)><S,U><L,U(U)><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a
+                   (w :: GHC.Show.Show a)
+                   (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Types.Int)
+                   (ww2 :: a) ->
+                 let {
+                   f :: GHC.Base.String -> GHC.Base.String
+                   = GHC.Show.showsPrec @ a w PageFiles.PageFile.$fShowPage1 ww2
+                 } in
+                 let {
+                   p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,1*U> -}
+                   = \ (x :: GHC.Base.String) ->
+                     GHC.Base.++
+                       @ GHC.Types.Char
+                       PageFiles.PageFile.$fShowPage6
+                       (GHC.Base.++
+                          @ GHC.Types.Char
+                          PageFiles.PageFile.$fShowPage5
+                          (case ww1 of ww3 { GHC.Types.I# ww4 ->
+                           case GHC.Show.$wshowSignedInt
+                                  0#
+                                  ww4
+                                  (GHC.Base.++
+                                     @ GHC.Types.Char
+                                     PageFiles.PageFile.$fShowPage4
+                                     (GHC.Base.++
+                                        @ GHC.Types.Char
+                                        PageFiles.PageFile.$fShowPage3
+                                        (f (GHC.Base.++
+                                              @ GHC.Types.Char
+                                              PageFiles.PageFile.$fShowPage2
+                                              x)))) of ww5 { (#,#) ww6 ww7 ->
+                           GHC.Types.: @ GHC.Types.Char ww6 ww7 } }))
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False -> p
+                   GHC.Types.True
+                   -> \ (x :: GHC.Base.String) ->
+                      GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.shows7
+                        (p (GHC.Types.: @ GHC.Types.Char GHC.Show.shows4 x)) }) -}
+9013649fdad4a5e06c681d9098e404bf
+  data Page a = Page {pageNumber :: GHC.Types.Int, contents :: a}
+9013649fdad4a5e06c681d9098e404bf
+  axiom Rep_Page::
+    [a]
+      GHC.Generics.Rep (PageFiles.PageFile.Page a)
+        = GHC.Generics.D1
+            ('GHC.Generics.MetaData
+               "Page"
+               "PageFiles.PageFile"
+               "redbase-0.1.0.0-9iZ8aZgef15K1eMl0hX7Pn"
+               'GHC.Types.False)
+            (GHC.Generics.C1
+               ('GHC.Generics.MetaCons
+                  "Page" 'GHC.Generics.PrefixI 'GHC.Types.True)
+               (GHC.Generics.S1
+                  ('GHC.Generics.MetaSel
+                     ('GHC.Base.Just "pageNumber")
+                     'GHC.Generics.NoSourceUnpackedness
+                     'GHC.Generics.NoSourceStrictness
+                     'GHC.Generics.DecidedLazy)
+                  (GHC.Generics.Rec0 GHC.Types.Int)
+                GHC.Generics.:*: GHC.Generics.S1
+                                   ('GHC.Generics.MetaSel
+                                      ('GHC.Base.Just "contents")
+                                      'GHC.Generics.NoSourceUnpackedness
+                                      'GHC.Generics.NoSourceStrictness
+                                      'GHC.Generics.DecidedLazy)
+                                   (GHC.Generics.Rec0 a)))
+c3241089d1452364fa29814386742c2f
+  contents :: PageFiles.PageFile.Page a -> a
+  RecSel Left PageFiles.PageFile.Page
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LS),1*U(A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (ds :: PageFiles.PageFile.Page a) ->
+                 case ds of wild { PageFiles.PageFile.Page ds1 ds2 -> ds2 }) -}
+cb58ed5939ce334f7f11fadda5893492
+  pageNumber :: PageFiles.PageFile.Page a -> GHC.Types.Int
+  RecSel Left PageFiles.PageFile.Page
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SL),1*U(1*U(U),A)>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (ds :: PageFiles.PageFile.Page a) ->
+                 case ds of wild { PageFiles.PageFile.Page ds1 ds2 -> ds1 }) -}
+instance [safe] Data.Binary.Class.Binary [PageFiles.PageFile.Page]
+  = PageFiles.PageFile.$fBinaryPage
+instance [safe] GHC.Generics.Generic [PageFiles.PageFile.Page]
+  = PageFiles.PageFile.$fGenericPage
+instance [safe] GHC.Show.Show [PageFiles.PageFile.Page]
+  = PageFiles.PageFile.$fShowPage
+family instance GHC.Generics.Rep [PageFiles.PageFile.Page]
+  = PageFiles.PageFile.Rep_Page
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

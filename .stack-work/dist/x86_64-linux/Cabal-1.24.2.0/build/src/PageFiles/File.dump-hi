@@ -1,0 +1,333 @@
+
+==================== FINAL INTERFACE ====================
+2017-07-27 00:05:48.118007 UTC
+
+interface redbase-0.1.0.0-FlVzKmFUjPK8GKhemx3jod:PageFiles.File 8002
+  interface hash: 3e279721cf530e92623e84abfd56504c
+  ABI hash: 15c6f437ad080407312e542f9976f5c8
+  export-list hash: 3391cc27065a004a464dac5d0f889ba9
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: d0ccaeb65db2b2fdbd48f0e17f3749af
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  PageFiles.File.byteLength
+  PageFiles.File.close
+  PageFiles.File.open
+  PageFiles.File.readPage
+  PageFiles.File.readPageAt
+  PageFiles.File.writePage
+  PageFiles.File.writePageAt
+module dependencies: PageFiles.Page
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0*
+                      binary-0.8.3.0@binary-0.8.3.0*
+                      bytestring-0.10.8.1@bytestring-0.10.8.1*
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+                      string-conversions-0.4.0.1@string-conversions-0.4.0.1-5bhARACLQyXG4DLNegoSj4
+                      text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR
+                      utf8-string-1.0.1.1@utf8-string-1.0.1.1-1DpjxLeTvGg7ttZZojxJR5
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Generic
+         bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString.Builder
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
+         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Show
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         redbase-0.1.0.0-FlVzKmFUjPK8GKhemx3jod:PageFiles.Page
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text
+                         text-1.2.2.1@text-1.2.2.1-Ji7hMs2U4BkBwavd4taEVR:Data.Text.Lazy
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.IO eb504c57b397cf133849f8586f15dafb
+import  -/  base-4.9.1.0:GHC.IO.Device d22fd445f819e329b4803780a22dddad
+import  -/  base-4.9.1.0:GHC.IO.Handle ba98a5b34d78cbf48b41fe58a3735c69
+import  -/  base-4.9.1.0:GHC.IO.Handle.FD dbf0d0d4f42ab1465129a88ccf7880ff
+import  -/  base-4.9.1.0:GHC.IO.Handle.Types 17aa0e2ab137800e3a31992d780c071f
+import  -/  base-4.9.1.0:GHC.IO.IOMode 2f5782f93b12a0d860d6d661b9fb405c
+import  -/  base-4.9.1.0:GHC.Num 00bfaa7b2f9d6084913c0697a8a49ec8
+import  -/  base-4.9.1.0:GHC.Real 82e4e59051a13dba1da63e1e970a69e6
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  base-4.9.1.0:System.IO e4a64a8e3dce8616da54f0ee7104f7db
+import  -/  binary-0.8.3.0@binary-0.8.3.0:Data.Binary 04731cb24bdd2d171e280dacabbc5b93
+import  -/  binary-0.8.3.0@binary-0.8.3.0:Data.Binary.Class b88eee4db2420047af9b40010da11191
+import  -/  bytestring-0.10.8.1@bytestring-0.10.8.1:Data.ByteString 43e99fdac51908da414a28958688da64
+import  -/  ghc-prim-0.5.0.0:GHC.Types 89f8de4f08018c9177c98d979eae0e45
+import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 318df275d77dcdb18e0006d8d7870c2a
+import  -/  PageFiles.Page 4233d12aa93d8358e6e5806cee8fd533
+  exports: b3dd08fe8b995b4bf31137e363c43cae
+  Page 645ced7e955615349da4420996bf5f5d
+import  -/  string-conversions-0.4.0.1@string-conversions-0.4.0.1-5bhARACLQyXG4DLNegoSj4:Data.String.Conversions ac5e9ee6386008f18243f1ba0f5e58b0
+516f32dba2221a869e85113493b04466
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   PageFiles.File.$trModule2
+                   PageFiles.File.$trModule1) -}
+1c31144eb19995ab4e26a80cf1a57921
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "PageFiles.File"#) -}
+1dbbe11029a45db45da042b3c75225b8
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "redbase-0.1.0.0-FlVzKmFUjPK8GKhemx3jod"#) -}
+e69ae20926d837cd85927c32179dc198
+  $wbyteLength :: Data.Binary.Class.Binary a => a -> GHC.Prim.Int#
+  {- Arity: 2, Strictness: <L,1*U(1*C1(U(A,U)),A,A)><L,U>,
+     Inline: [0],
+     Unfolding: (\ @ a (w :: Data.Binary.Class.Binary a) (w1 :: a) ->
+                 case Data.ByteString.Internal.$fMonoidByteString_$cmconcat
+                        (Data.ByteString.Lazy.toChunks_go1
+                           (Data.ByteString.Builder.toLazyByteString
+                              (case (Data.Binary.Class.put @ a w w1)
+                                      `cast`
+                                    (Data.Binary.Put.N:PutM[0] <()>_N) of wild { Data.Binary.Put.PairS ds1 b ->
+                               b }))) of wild { Data.ByteString.Internal.PS dt dt1 dt2 dt3 ->
+                 case GHC.Integer.Type.smallInteger
+                        dt3 of ww { GHC.Integer.Type.S# ww1 ->
+                 ww1 } }) -}
+a135d55a552f601c6ed4f7827e8d5c34
+  byteLength ::
+    Data.Binary.Class.Binary a => a -> GHC.Integer.Type.Integer
+  {- Arity: 2, Strictness: <L,1*U(1*C1(U(A,U)),A,A)><L,U>m1,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a (w :: Data.Binary.Class.Binary a) (w1 :: a) ->
+                 case PageFiles.File.$wbyteLength @ a w w1 of ww { DEFAULT ->
+                 GHC.Integer.Type.S# ww }) -}
+1e1ee7ca245bab70b6de077f7057c492
+  close :: GHC.IO.Handle.Types.Handle -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <S,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                GHC.IO.Handle.hClose1
+                  `cast`
+                (<GHC.IO.Handle.Types.Handle>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+73fd0992e0d0f58e46eba06c3468cc18
+  open :: GHC.IO.FilePath -> GHC.Types.IO GHC.IO.Handle.Types.Handle
+  {- Arity: 2, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                PageFiles.File.open1
+                  `cast`
+                (<GHC.IO.FilePath>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <GHC.IO.Handle.Types.Handle>_R)) -}
+34cb9aea1bd484acc949c3b8e3f7d793
+  open1 ::
+    GHC.IO.FilePath
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          GHC.IO.Handle.Types.Handle #)
+  {- Arity: 2, Strictness: <L,U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (path :: GHC.IO.FilePath)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 GHC.IO.Handle.FD.openFile1 path GHC.IO.IOMode.ReadWriteMode eta) -}
+b8a2241d9989d21c7d72a7957ebb53ea
+  readPage ::
+    Data.Binary.Class.Binary a =>
+    GHC.IO.Handle.Types.Handle
+    -> GHC.Integer.Type.Integer -> GHC.Types.IO (PageFiles.Page.Page a)
+  {- Arity: 4, Strictness: <L,U(A,C(C1(U)),A)><L,U><S,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                PageFiles.File.readPage1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Data.Binary.Class.Binary a>_R
+                 ->_R <GHC.IO.Handle.Types.Handle>_R
+                 ->_R <GHC.Integer.Type.Integer>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <PageFiles.Page.Page a>_R)) -}
+0b3a8d7805cf39fb2e6eb00cc1e69fe8
+  readPage1 ::
+    Data.Binary.Class.Binary a =>
+    GHC.IO.Handle.Types.Handle
+    -> GHC.Integer.Type.Integer
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, PageFiles.Page.Page a #)
+  {- Arity: 4, Strictness: <L,U(A,C(C1(U)),A)><L,U><S,1*U><S,U>,
+     Unfolding: (\ @ a
+                   ($dBinary :: Data.Binary.Class.Binary a)
+                   (fileHandle :: GHC.IO.Handle.Types.Handle)
+                   (pageSize :: GHC.Integer.Type.Integer)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.Integer.Type.integerToInt pageSize of wild { DEFAULT ->
+                 case Data.ByteString.$whGetSome
+                        fileHandle
+                        wild
+                        s of ds { (#,#) ipv ipv1 ->
+                 (# ipv,
+                    Data.Binary.Get.runGet1
+                      @ (PageFiles.Page.Page a)
+                      (Data.Binary.Get.$wpoly_go
+                         @ (PageFiles.Page.Page a)
+                         (Data.Binary.Get.Internal.runGetIncremental1
+                            @ (PageFiles.Page.Page a)
+                            (PageFiles.Page.$w$cget
+                               @ a
+                               $dBinary
+                               @ (PageFiles.Page.Page a)
+                               __NULL
+                               Data.ByteString.Internal.$fMonoidByteString3
+                               0#
+                               0#
+                               (Data.Binary.Get.Internal.$WDone @ (PageFiles.Page.Page a))))
+                         0#)
+                      (Data.ByteString.Lazy.fromChunks_go
+                         (GHC.Base.$fApplicative[]_$cpure
+                            @ Data.ByteString.Internal.ByteString
+                            ipv1)) #) } }) -}
+ebe998ba575cbb6ba2dddb0cad232962
+  readPageAt ::
+    Data.Binary.Class.Binary a =>
+    GHC.IO.Handle.Types.Handle
+    -> GHC.Integer.Type.Integer
+    -> GHC.Integer.Type.Integer
+    -> GHC.Types.IO (PageFiles.Page.Page a)
+  {- Arity: 5, Strictness: <L,U(A,C(C1(U)),A)><S,U><L,1*U><L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                PageFiles.File.readPageAt1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Data.Binary.Class.Binary a>_R
+                 ->_R <GHC.IO.Handle.Types.Handle>_R
+                 ->_R <GHC.Integer.Type.Integer>_R
+                 ->_R <GHC.Integer.Type.Integer>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <PageFiles.Page.Page a>_R)) -}
+4358d0b2c260a55cc475eed992cd9d74
+  readPageAt1 ::
+    Data.Binary.Class.Binary a =>
+    GHC.IO.Handle.Types.Handle
+    -> GHC.Integer.Type.Integer
+    -> GHC.Integer.Type.Integer
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, PageFiles.Page.Page a #)
+  {- Arity: 5, Strictness: <L,U(A,C(C1(U)),A)><S,U><L,1*U><L,U><S,U>,
+     Unfolding: InlineRule (5, True, False)
+                (\ @ a
+                   ($dBinary :: Data.Binary.Class.Binary a)
+                   (handle :: GHC.IO.Handle.Types.Handle)
+                   (pageNumber :: GHC.Integer.Type.Integer)
+                   (pageSize :: GHC.Integer.Type.Integer)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.hSeek1
+                        handle
+                        GHC.IO.Device.AbsoluteSeek
+                        (GHC.Integer.Type.timesInteger pageNumber pageSize)
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 PageFiles.File.readPage1 @ a $dBinary handle pageSize ipv }) -}
+dc5000ab5a0de1f8fd7c0ca31a504d40
+  writePage ::
+    Data.Binary.Class.Binary a =>
+    GHC.IO.Handle.Types.Handle
+    -> PageFiles.Page.Page a -> GHC.Types.IO ()
+  {- Arity: 4,
+     Strictness: <L,1*U(1*C1(U(A,U)),A,A)><L,U><L,1*U(U(U),U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                PageFiles.File.writePage1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Data.Binary.Class.Binary a>_R
+                 ->_R <GHC.IO.Handle.Types.Handle>_R
+                 ->_R <PageFiles.Page.Page a>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+ff62fe27301ca0a6b43e20b259aab8e9
+  writePage1 ::
+    Data.Binary.Class.Binary a =>
+    GHC.IO.Handle.Types.Handle
+    -> PageFiles.Page.Page a
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 4,
+     Strictness: <L,1*U(1*C1(U(A,U)),A,A)><L,U><L,1*U(U(U),U,U)><S,U>,
+     Unfolding: (\ @ a
+                   ($dBinary :: Data.Binary.Class.Binary a)
+                   (handle :: GHC.IO.Handle.Types.Handle)
+                   (page :: PageFiles.Page.Page a)
+                   (eta :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case Data.ByteString.Internal.$fMonoidByteString_$cmconcat
+                        (Data.ByteString.Lazy.toChunks_go1
+                           (Data.ByteString.Builder.toLazyByteString
+                              (case page of ww { PageFiles.Page.Page ww1 ww2 ww3 ->
+                               case PageFiles.Page.$w$cput
+                                      @ a
+                                      $dBinary
+                                      ww1
+                                      ww2
+                                      ww3 of ww4 { (#,#) ww5 ww6 ->
+                               ww6 } }))) of ww { Data.ByteString.Internal.PS ww1 ww2 ww3 ww4 ->
+                 Data.ByteString.$whPut handle ww1 ww2 ww3 ww4 eta }) -}
+9279ced7fbc99e0b15e29a9df2fb99be
+  writePageAt ::
+    Data.Binary.Class.Binary a =>
+    GHC.IO.Handle.Types.Handle
+    -> GHC.Integer.Type.Integer
+    -> PageFiles.Page.Page a
+    -> GHC.Types.IO ()
+  {- Arity: 5,
+     Strictness: <L,U(C(U(A,U)),A,A)><S,U><L,1*U><L,U(U(U),U,U)><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                PageFiles.File.writePageAt1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Data.Binary.Class.Binary a>_R
+                 ->_R <GHC.IO.Handle.Types.Handle>_R
+                 ->_R <GHC.Integer.Type.Integer>_R
+                 ->_R <PageFiles.Page.Page a>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+f16d6eda41c2977925643aafd7261696
+  writePageAt1 ::
+    Data.Binary.Class.Binary a =>
+    GHC.IO.Handle.Types.Handle
+    -> GHC.Integer.Type.Integer
+    -> PageFiles.Page.Page a
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 5,
+     Strictness: <L,U(C(U(A,U)),A,A)><S,U><L,1*U><L,U(U(U),U,U)><S,U>,
+     Unfolding: (\ @ a
+                   ($dBinary :: Data.Binary.Class.Binary a)
+                   (handle :: GHC.IO.Handle.Types.Handle)
+                   (pageNumber :: GHC.Integer.Type.Integer)
+                   (page :: PageFiles.Page.Page a)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 case GHC.IO.Handle.hSeek1
+                        handle
+                        GHC.IO.Device.AbsoluteSeek
+                        (case Data.ByteString.Internal.$fMonoidByteString_$cmconcat
+                                (Data.ByteString.Lazy.toChunks_go1
+                                   (Data.ByteString.Builder.toLazyByteString
+                                      (case page of ww { PageFiles.Page.Page ww1 ww2 ww3 ->
+                                       case PageFiles.Page.$w$cput
+                                              @ a
+                                              $dBinary
+                                              ww1
+                                              ww2
+                                              ww3 of ww4 { (#,#) ww5 ww6 ->
+                                       ww6 } }))) of wild { Data.ByteString.Internal.PS dt dt1 dt2 dt3 ->
+                         GHC.Integer.Type.timesInteger
+                           pageNumber
+                           (GHC.Integer.Type.smallInteger dt3) })
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 PageFiles.File.writePage1 @ a $dBinary handle page ipv }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
